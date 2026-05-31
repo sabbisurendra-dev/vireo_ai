@@ -61,7 +61,7 @@ export function CommandCenter() {
           <span className="hidden text-sm text-muted-foreground md:inline">— your personal AI assistant.</span>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <Button variant="outline" size="sm" className="h-7 rounded-full px-2 text-[11px]" onClick={() => window.alert("Emergency info: India 112, emergency contacts, blood group, allergies, medications, and nearest hospital. Informational only.")}><AlertTriangle className="h-3 w-3 text-destructive mr-1" />Emergency</Button>
+          <Button variant="outline" size="sm" className="h-7 rounded-full px-2 text-[11px]" onClick={() => window.alert("Emergency Info (India):\n• Unified National Helpline: 112\n• Ambulance & Medical: 108 or 102\n• Police: 100\n• Fire Services: 101\n\nAlso make sure you have recorded: Emergency contacts, blood group, allergies, active medications, and nearest hospital details.")}><AlertTriangle className="h-3 w-3 text-destructive mr-1" />Emergency</Button>
           <Button size="sm" className="h-7 rounded-full px-3 text-[11px]" onClick={() => window.dispatchEvent(new Event("open-wisdom-assistant"))}><MessageCircle className="h-3 w-3 mr-1" />Talk to Vireo</Button>
         </div>
       </div>
