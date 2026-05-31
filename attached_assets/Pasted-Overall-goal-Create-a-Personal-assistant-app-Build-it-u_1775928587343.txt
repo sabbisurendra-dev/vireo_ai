@@ -1,0 +1,196 @@
+Overall goal:
+
+Create a Personal assistant app. Build it using free open source tools end to end and host the website and app. Design a Launch plan, GTM strategy, revenue generation, scaling, roadmap for 1,3,5,10,25,100 years.
+
+Prompt overall: 
+Build a self-improving Personal AI Assistant — free, open-source, end to end — that compounds knowledge, builds habits, and generates revenue.
+Use Expo + Next.js for app and web. Supabase for data. Claude API for intelligence. Whisper for voice. Deploy on Vercel and EAS.
+Core features: voice PRD builder, daily learning feed, habit tracker, mind maps, course library.
+Launch free. Monetise at value. Scale via B2B, certifications, and creator marketplace.
+Year 1: 1K users. Year 3: 100K. Year 5: 1M. Year 10: platform. Year 25: institution. Year 100: open foundation.
+Stack: Expo → Supabase → Claude → Vercel. Cost: ₹0. Mission: compound every human who uses it.
+
+Output needed:
+
+Output1. Build a Website: Create, host using free open source tools end to end.
+
+UI/UX/Design:
+Functionality:
+Goals: 
+
+Prompt overall: 
+Build and deploy a fully functional website using only free, open-source tools.
+Use Next.js for the frontend, Tailwind CSS for styling, and Supabase for the database and authentication. Write and test code in Replit or VS Code. Store all code on GitHub. Deploy instantly to Vercel using the GitHub integration — live URL in under 5 minutes.
+No credit card. No paid tier. No excuses.
+The site must have a homepage, one data-connected page, and user login. Mobile responsive by default.
+Stack: Next.js → GitHub → Vercel → Supabase. Total cost: ₹0. Time to launch: one weekend.
+
+Prompt focus:  
+Design and build a visually stunning website using only free, open-source design and dev tools.
+Use Figma (free tier) to wireframe and prototype. Build with Next.js and Tailwind CSS — utility-first, pixel-precise. Use shadcn/ui for accessible, beautiful components. Source icons from Lucide, illustrations from unDraw, fonts from Google Fonts.
+Every screen must pass contrast accessibility (WCAG AA). Mobile-first. Transitions under 200ms. White space is intentional, not empty.
+Deploy on Vercel. Share the Figma link alongside the live URL.
+Design stack: Figma → shadcn/ui → Tailwind → Vercel. Cost: ₹0. Deliverable: a site that feels premium, built for free.
+
+Prompt focus:  
+Build a fully functional, feature-rich website using only free, open-source tools — every feature must actually work.
+Use Next.js 14 App Router for server and client logic. Supabase for live database, auth, and file storage. React Hook Form for validated inputs. SWR for real-time data fetching. Resend (free tier) for transactional emails. Zod for schema validation end-to-end.
+Every button does something. Every form submits, validates, and responds. Every error is caught and shown clearly. No dummy data in production.
+Deploy on Vercel with environment variables secured.
+Functionality stack: Next.js → Supabase → Zod → Vercel. Cost: ₹0. Standard: if it breaks, fix it before shipping.
+
+Prompt focus:  
+Build a website engineered for real business outcomes — using only free, open-source tools, end to end.
+Every page has one job. Homepage converts visitors to sign-ups. Pricing page converts sign-ups to paying users. Blog drives organic SEO traffic. Use Next.js for speed, Supabase for user data, Plausible (OSS) for privacy-first analytics, and Resend for drip email sequences.
+Measure everything: bounce rate, conversion rate, MRR. Set up goal tracking from day one.
+The site is not done when it looks good — it is done when it generates revenue.
+Business stack: Next.js → Supabase → Plausible → Resend. Cost: ₹0. Metric: first paying customer.
+
+
+
+Output2. Build an App: Create using free open source tools end to end and host it.
+
+UI/UX/Design:
+Functionality:
+Goals: 
+
+Prompt overall: 
+Build and deploy a fully functional mobile-ready app using only free, open-source tools — end to end.
+Use React Native with Expo for cross-platform iOS and Android from one codebase. Supabase for database, auth, and real-time sync. Zustand for lightweight state management. Expo Go for instant device testing — no App Store needed to start.
+Every screen must load under 2 seconds. Offline mode handled gracefully. Push notifications wired up from day one.
+Deploy web version on Vercel. Ship Android APK via Expo EAS free tier.
+App stack: Expo → Supabase → Zustand → EAS. Cost: ₹0. Deliverable: real app, real users, real devices.
+
+Prompt focus:  
+Design and build a beautiful, intuitive mobile app using only free, open-source design and dev tools — end to end.
+Wireframe every screen in Figma (free tier) before writing one line of code. Build with Expo and React Native. Use NativeWind (Tailwind for React Native) for consistent styling. Gluestack UI for accessible, production-ready components. Lucide icons. Google Fonts via Expo.
+Follow 8pt grid spacing. Thumb-friendly touch targets minimum 44px. Smooth 60fps transitions using Reanimated. Dark mode supported natively.
+Test on real devices via Expo Go before shipping.
+Design stack: Figma → NativeWind → Gluestack → Expo Go. Cost: ₹0. Standard: delightful on first tap.
+
+Prompt focus:  
+Build a fully functional, production-ready app where every feature works reliably — using only free, open-source tools.
+Use Expo and React Native for cross-platform logic. Supabase for real-time database, row-level security, auth, and edge functions. React Query for server state and caching. Zod for end-to-end input validation. Zustand for local state. Expo SecureStore for sensitive data. Background tasks via Expo TaskManager.
+Every API call has a loading state, error state, and success state. No silent failures. Offline queue syncs when connection restores.
+Test every feature on iOS and Android before shipping.
+Functionality stack: Expo → Supabase → React Query → Zod. Cost: ₹0. Standard: every tap does exactly what it promises.
+
+Prompt focus:  
+Build an app engineered to acquire, retain, and monetise real users — using only free, open-source tools, end to end.
+Use Expo for cross-platform reach. Supabase for user data and behaviour tracking. RevenueCat (free tier) for in-app subscriptions and paywall management. PostHog (OSS) for product analytics, funnels, and retention cohorts. Expo Notifications for re-engagement campaigns. Lemon Squeezy for one-time purchases.
+Track one metric per screen. Optimise onboarding to under 60 seconds. Paywall appears at peak value moment — not before.
+Every feature either acquires, retains, or monetises. Cut everything else.
+Business stack: Expo → RevenueCat → PostHog → Supabase. Cost: ₹0. Metric: Day 30 retention above 40%.
+
+
+
+
+Output3. Create all Business documents: On crucial aspects of business 
+
+Launch plan: Build 0-1 business plan, product, services etc. from scratch. 
+Build product: Ideate, Build, Host, Interactively and launch for customers. PRDs, prototypes, working demos, MVP
+Value and revenue generation: GTM, Roadmap for 1,3,5,10,25,100 years. Scaling, Growth
+Legal and compliance: For Indian, international context
+Pitch: Create a 10 slide PPT, pitch deck, pdf that can assist in getting customers, investments, stakeholders, revenue.
+Others: Knowledge and Wisdom gain, Create IP, Monetisation, PM portfolio, Awareness creation
+
+Prompt focus: 
+Build a Personal AI Assistant app end-to-end — from zero to global scale — using only free, open-source tools.
+Document everything: PRDs, wireframes, MVPs, pitch decks, business plans, legal templates — all in Notion, Google Docs, Figma, and GitHub. Launch on Vercel and Expo. GTM via organic SEO, LinkedIn, and Product Hunt. Monetise through freemium SaaS, course bundles, and B2B licensing.
+Comply with India's DPDP Act and GDPR internationally. Build IP through published courses, certifications, and open-source contributions.
+Roadmap: 1 user today → 1 billion impacted over 100 years.
+Stack: everything free. Outcome: a self-sustaining, compounding knowledge and revenue engine.
+
+
+
+Default Priorities: 
+
+Individual documents for each goal, sub goal will be provided.
+
+Goal 1: Health - overall human (physical, mental, sleep, diet, exercise, recreation) 
+Maintain - Always maintain a healthy baseline health markers, metrics which can be monitored and understood, implemented regularly. 
+Alert - Create alerts and support for critical, crucial things.
+Achieve - Improve health and fulfillment.
+
+This should cover basic day to day things a human being does typically for a healthy life. 
+Continuous activities: Heart rate, Stress etc. (Devices: Whoop 5.0)
+Daily activities: Morning routine, Night routine, sleep, mindfulness (Journal)
+Periodic activities: Weight monitoring (Devices: Whithings+ smart body composition scale)
+
+Goal 2: Common Skills (Learn and Automate day to day activities and skills)
+Essential skills - Design a course for learning (Cooking, Building a habit, How internet works ) 
+Professional skills (Product management, AI, Data science, Soft skills, Business strategy )
+Areas of Interest (Audio and Music, Remote control management, Video and display tech, Run a restaurant business, Learn deep meaning of words,  )
+
+
+Goal 3: One stop solution (For On demand info, assistance, Identify verification )
+Instant assistance: Emergency, Identify verification, Authenticity management
+Assets management: Ownership proofs, transfer process
+Liabilities management: Clearance, Legal, Consolidation
+
+Description: Build a One stop personal wallet app / feature for Identity and ownership proofs. 
+
+
+Goal 1 PRD: 
+
+Combine all health data from all devices available.
+Whoop 5.0 - 24/7 data, sleep data, Journal data
+Whitings+ smart body fat scale - Periodic weekly body composition metrics (weight, body fat, muscle, water content etc.)
+Alert if critical metrics falls below a threshold
+Habit tracking - User enters habits they want to track (can add delete habits at any time), data gets tracked and analysed to tell which habits worked - critique this with whoop algorithm to see existing signals available 
+
+Improve this PRD using credible and reputed sources on the internet.
+
+Goal 2 PRD: 
+
+Cooking skill:
+
+Primary goal : Design a Cooking course (indian)
+Secondary goal: Create a 1 page detailed reference guide (output as PDF doc). 
+Other goals: Always maintain food safety and hygiene, Healthy, convenience, reliable, easy, simple, tasty
+
+Steps : 
+Oil base : 
+Ghee, Olive oil, mustard, butter
+
+Key ingredients : 
+Egg, chicken, veggies, 
+Nuts, legumes, plants, fruits 
+
+Carbs base : Protein Bread
+
+Masala’s ( dry , wet , hybrid ) 
+Dry spices : No water 
+Indian spices (salt , chilli powder , garam masala , chicken , mutton, prawn, fish masala etc) 
+Wet spices- water content 
+Chilies, onion, tomato, coriander, curry leaves , methi etc 
+Hybrid spices- Mix dry, wet spices for a hybrid mix with different consistency (onion, chillies, leaves etc with dry masala’s ) 
+
+Improve this PRD using credible and reputed sources on the internet.
+
+Goal 3 PRD: 
+
+Build a one stop personal wallet app - purpose: for all common needs of day to day, legal etc. for a user
+User: Working professional in a tier 1,2 urban city of India 
+Data sources : 
+Use only the highly reliable, credible, trusted, verified, highly rated sources across Internet and other open source resources
+Services needed : 
+Proofs: Identity , licences , permits etc and other common things needed to prove the identity or ownership of a thing 
+Emergency help: Medical , Safety etc 
+Travel help: Flight / Train / Bus / Car - uber tracking, International support, Language and translation: 
+Use open APIs in Google Gemini , or Wikipedia or ChatGPT etc. 
+Dashboard interface: 
+Integrate open source , free, highly reliable services like Digi Yatra, digilocker , emergency helplines accessible for public , flight tracker , irctc, uber , international travel help and support links 
+Asset and liability management section: 
+This should contain needed services like Real estate: house, land, property ownership proofs 
+Financial digital assets: Stocks, mutual funds, bonds, FD’s , etc 
+Financial health : Total assets and debts section, Bank balances , EPF services , 
+Financial education resources and learning help. Quick and fun flash cards , quiz’s to enhance and make learning more fun 
+
+
+Improve this PRD using credible and reputed sources on the internet.
+
+
+
+—---------------------------
+

@@ -1,0 +1,72 @@
+Create a formal PRD that outlines the technical and functional requirements for building my PERSONAL ASSISTANT APP. The document must define user personas, success metrics, and high-priority features like multimodal encoders and shared embedding spaces to allow the assistant to process images and audio alongside text, while adhering to the living document best practices for product management. Personal assistant app
+
+Overall goal:
+
+Create a Personal assistant app. Build it using free open source tools end to end and host the website and app. Design a Launch plan, GTM strategy, revenue generation, scaling, roadmap for 1,3,5,10,25,100 years
+
+Output needed:
+
+Output1. Build a Website: Create using free open source tools end to end and host it.
+
+UI/UX/Design:
+Functionality:
+Goals: 
+
+Prompt overall: 
+Build and deploy a fully functional website using only free, open-source tools.
+Use Next.js for the frontend, Tailwind CSS for styling, and Supabase for the database and authentication. Write and test code in Replit or VS Code. Store all code on GitHub. Deploy instantly to Vercel using the GitHub integration — live URL in under 5 minutes.
+No credit card. No paid tier. No excuses.
+The site must have a homepage, one data-connected page, and user login. Mobile responsive by default.
+Stack: Next.js → GitHub → Vercel → Supabase. Total cost: ₹0. Time to launch: one weekend.
+
+
+Output2. Build an App: Create using free open source tools end to end and host it.
+
+UI/UX/Design:
+Functionality:
+Goals: 
+
+Prompt overall: 
+Build and deploy a fully functional mobile-ready app using only free, open-source tools — end to end.
+Use React Native with Expo for cross-platform iOS and Android from one codebase. Supabase for database, auth, and real-time sync. Zustand for lightweight state management. Expo Go for instant device testing — no App Store needed to start.
+Every screen must load under 2 seconds. Offline mode handled gracefully. Push notifications wired up from day one.
+Deploy web version on Vercel. Ship Android APK via Expo EAS free tier.
+App stack: Expo → Supabase → Zustand → EAS. Cost: ₹0. Deliverable: real app, real users, real devices.
+
+Output3. Create all Business documents: On crucial aspects of business 
+
+Launch plan: Build 0-1 business plan, product, services etc. from scratch. 
+Build product: Ideate, Build, Host, Interactively and launch for customers. PRDs, prototypes, working demos, MVP
+Value and revenue generation: GTM, Roadmap for 1,3,5,10,25,100 years. Scaling, Growth
+Legal and compliance: For Indian, international context
+Pitch: Create a 10 slide PPT, pitch deck, pdf that can assist in getting customers, investments, stakeholders, revenue.
+Others: Knowledge and Wisdom gain, Create IP, Monetisation, PM portfolio, Awareness creation
+
+Prompt focus: 
+Build a Personal AI Assistant app end-to-end — from zero to global scale — using only free, open-source tools.
+Document everything: PRDs, wireframes, MVPs, pitch decks, business plans, legal templates — all in Notion, Google Docs, Figma, and GitHub. Launch on Vercel and Expo. GTM via organic SEO, LinkedIn, and Product Hunt. Monetise through freemium SaaS, course bundles, and B2B licensing.
+Comply with India's DPDP Act and GDPR internationally. Build IP through published courses, certifications, and open-source contributions.
+Roadmap: 1 user today → 1 billion impacted over 100 years.
+Stack: everything free. Outcome: a self-sustaining, compounding knowledge and revenue engine.
+
+
+
+Default Priorities:
+
+Goal 1: Health - overall human (physical, mental, sleep, diet, exercise, recreation) 
+Maintain - Always maintain a healthy baseline health markers, metrics which can be monitored and understood, implemented regularly. 
+Alert - Create alerts and support for critical, crucial things.
+Achieve - Improve health and fulfillment.
+
+This should cover basic day to day things a human being does typically for a healthy life. 
+
+Goal 2: Common activities (Learn, Design a course)
+D1: Design a course for learning. 
+D2 - Can be added later
+D3 - Can be added later
+
+
+Goal 3: Can be added later (Can be added later)
+D1 - Can be added later
+D2 - Can be added later
+D3 - Can be added later

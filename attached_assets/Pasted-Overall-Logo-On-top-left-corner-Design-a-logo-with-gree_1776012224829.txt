@@ -1,0 +1,64 @@
+Overall:
+
+Logo: On top left corner, Design a logo with green, blue, grey colour mix logo based on 3 goals 
+
+Customization based on user needs - Ensure a customized logo is present in the top section.
+Customizations by user feature - Through “settings”, “more”, “customize” logos or buttons - let the user select 1 or multiple of 4 majorly prominent cards present by default in the home page. The cards de-selected or un-selected by the user should not appear on the home page as major cards. But should be visible as quick to access collapsed cards.
+
+Research and implement : 
+Research and implement credible, reliable, trusted , authentic sources across internet and import relevant open source, fully free, legal resources and libraries, extensions - to improve the functionality and look and feel of website and app
+
+Change main title and positioning as - I am your personal assistant helping in all important aspects. Add a section to talk to my personal assistant in 1 or 2 clicks . 
+
+In Goal 1: Health
+In health, add indicators for Immediate actionables, today's status, rising trend of last 1 week, current trend of the last 1 month, long term health of 1 year. 
+Clicking on detailed view should show more useful metrics
+Make daily briefing more useful, keep Top priority tasks, Immediate tasks, reduce weather info. 
+Keep the emergency info icon clearly visible but small and not intrusive for daily use.
+
+In Goal 2 : Daily learnings: Show current top 1,2,3 skills in progress, more deep dive options to be present . Design detailed way to track next actionables and progress in each task, learning courses 
+
+Goal 3: Digital wallet:
+UI and UX Look: Ensure this entire section or widget looks like a big realtime real life size leather wallet used commonly in men's pockets. 
+Approach: 
+View 1: Homepage should feel like just a plain leather wallet with not direct information and just ensuring it’s secure, reliable, safe etc. 
+View 2: Opening leather wallet should lead to a nice, smooth animation, gif, lottie file indicating a real human life wallet is being opened but enhanced by AI. View 2 will show common documents that are likely to be present in actual human men's wallets. Show list of documents . Further click should reveal a digitally valid and authentic copy or scanned image copy of document. Give a minimally visible, rarely used CTA, button to view assets and liabilities section
+View 3: Show detailed documents available and sort them into broad categories like banks, house, liquid cash, mutual funds etc. Ensure this view is slightly difficult and frictional to access, as this might not need to be viewed daily or monthly and is rarely used for very personal, secure, safe use from time to time.
+
+Top 15-20% space:
+
+Don’t keep the top 15-20% mostly empty. Get a standard layout with most common elements across all popular and profitable, high user scale, websites and apps. Incorporate Home button, settings, way to logout button while is kept inside another button which leads to other possible action. Reduce the test in this. Add cool logos reflecting the 3 goals in the sequential priority of goal 1,2,3. Make daily snapshot items clickable, give a detailed info about specific task and action that needs to be taken, option to mark it done, prepone, postpone , delay, delete etc 
+
+
+Goal 1: Health snapshot:
+
+In the habit collaboration part - add more details on recent 2-3 habits which are highly correlated and 2-3 habits which can be improved based on data with strong correlation and causation. Keep improvements like a nudge rather than harsh warnings, as warnings are mainly in the home page view. 
+Ensure the weather button is clickable to give a quick snapshot of current weather and any alerts . Highlight weather widget or icon or button if any emergency or critical info is useful. 
+
+Goal 2: Daily learnings and development 
+
+Create a single button or way to do deep into health 
+Rename identity vault - Keep it more customer friendly as assistant to have all ID proofs, act as replacement for a physical wallet in terms of cards it holds like PAN, aadhar, Driving licence, Company ID card, Permit card, etc. In this bento box identity vault - keep appropriate CTA, don't keep safe, 100% etc as CTA or primary text, show them only in such a way that user can understand the security of it but with minimal font and visual elements, relying mainly on logos , visual info rather than pure text.
+Add an open chat with my personal assistant, similar to how the speaker mode is present. Keep speak mode in background rather than a very prominent CTA. Keep this option in a non prominent corner rather than on the bottom centre. Ensure chatbot works based on real user input, the model for it can be simulated based on dummy data present now, but as soon as real user data is available, the chatbot can use open source GPT models in real time and generate a relevant useful output to the user. Add options to mark/favorite/ bookmark and chat. Add a option to go to end of chat or start of chat with a single click 
+
+
+Goal 3: Digital wallet:
+
+Design of digital wallet, ids section as benobox. Give users the experience to open a real leather wallet animation or image. 
+Users should feel like opening a real leather wallet and showing documents like cards it holds: Sort documents in order of: Company ID card, aadhar, PAN, Driving licence, Permit card, etc.,
+Show prominently: Payment options like - common indian UPI apps like phonepe, googlepay etc.
+Don't show anything about networth, number of ids cards, assets, keep them hidden from main view. Show title in the centre in big and prominent titles
+In the digital wallet , ids section - assume all the access is given. Don’t show unlock as primary cta. 
+Primary CTA should be - similar to opening a wallet. Give a quick animation like opening a wallet which is very similar to actually opening a leather wallet, but digital info shows up . 
+
+Digital wallet: highlight that it’s safe and private, document names need not be available in home page, they can be viewed inside a separate landing page or view where more space is available to show all ID proofs
+Assets and Liabilities section - Idea is all asset , liability, physical documents , digital documents, permits, certificates etc owned by an individual is present as digital copy or scanned copy of physical document
+Create a detailed Assets and Liabilities section - ensure both these sections are present inside only but in detail, show total asset and description like liquid cash, house, bongs, mutual funds, lands, other assets. 
+
+Floating items and widgets:
+Show a personal AI assistant on the right bottom corner , small but still visible. Options inside it should take the user to either chat with AI, talk to AI using voice command and microphone . Show options in new style like floating in air modern look 
+Ensure AI is able to actually help users based on all the information present on health, learnings, digital wallet, assets etc.
+
+
+Legal:
+Ensure all basic requirements for a public website and app are met for india and international regulations . Show privacy policy, about, other legally needed services like data protection, health data management , privacy, GDPI etc are fully compliant based on the context. 
