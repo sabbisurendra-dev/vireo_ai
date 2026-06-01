@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertTriangle, ArrowRight, BadgeIndianRupee, CreditCard, LockKeyhole, ShieldCheck, Smartphone, WalletCards, X } from "lucide-react";
+import { AlertTriangle, ArrowRight, BadgeIndianRupee, CreditCard, EyeOff, LockKeyhole, ShieldCheck, Smartphone, WalletCards, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,41 +17,51 @@ const walletCards = [
 const paymentApps = [
   {
     name: "PhonePe",
+    url: "https://www.phonepe.com/",
     logo: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#5f259f] shrink-0" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="24" rx="5" />
-        <path d="M12 4a8 8 0 100 16 8 8 0 000-16zm-1 11H9V8h2v7zm4-4h-2v4h-2V8h4a2 2 0 010 4z" fill="white" />
+      <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="white" stroke="#e2e8f0" strokeWidth="0.5" />
+        <circle cx="12" cy="12" r="8" fill="#5f259f" />
+        <text x="12" y="15" fill="white" fontSize="9" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">पे</text>
       </svg>
     )
   },
   {
     name: "Google Pay",
+    url: "https://pay.google.com/",
     logo: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="24" rx="5" fill="#f1f3f4" />
-        <path d="M17.5 12.25c0-.4-.03-.78-.1-1.15h-5.4v2.18h3.08c-.13.7-.53 1.3-1.13 1.7v1.4h1.83c1.07-.98 1.72-2.43 1.72-4.13z" fill="#4285f4" />
-        <path d="M12 17.8c1.56 0 2.88-.5 3.84-1.4l-1.83-1.4c-.5.34-1.15.54-2.01.54-1.55 0-2.85-1.04-3.32-2.44H6.77v1.45c.98 1.95 3.01 3.25 5.23 3.25z" fill="#34a853" />
-        <path d="M8.68 13.1c-.12-.35-.18-.73-.18-1.1s.06-.75.18-1.1V9.45H6.77c-.4.8-.62 1.7-.62 2.65s.22 1.85.62 2.65l1.91-1.45z" fill="#fbbc05" />
-        <path d="M12 6.2c.85 0 1.62.3 2.22.86l1.66-1.66C14.88 4.45 13.56 4 12 4c-2.22 0-4.25 1.3-5.23 3.25l1.91 1.45c.47-1.4 1.77-2.5 3.32-2.5z" fill="#ea4335" />
+      <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="white" stroke="#e2e8f0" strokeWidth="0.5" />
+        <g transform="translate(4, 4) scale(0.667)">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.85z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.85c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </g>
       </svg>
     )
   },
   {
     name: "Paytm",
+    url: "https://paytm.com/",
     logo: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="24" rx="5" fill="#00baf2" />
-        <path d="M7 6h6.5c1.9 0 3.5 1.6 3.5 3.5S15.4 13 13.5 13H10v5H7V6zm3 4h3.5c.3 0 .5-.2.5-.5s-.2-.5-.5-.5H10v1z" fill="white" />
+      <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="white" stroke="#e2e8f0" strokeWidth="0.5" />
+        <circle cx="12" cy="12" r="8" fill="#002970" />
+        <g transform="translate(6.5, 6.5) scale(0.45)">
+          <path d="M15.85 8.167a.204.204 0 0 0-.04.004c-.68.19-.543 1.148-1.781 1.23h-.12a.23.23 0 0 0-.052.005h-.001a.24.24 0 0 0-.184.235v1.09c0 .134.106.241.237.241h.645v4.623c0 .132.104.238.233.238h1.058a.236.236 0 0 0 .233-.238v-4.623h.6c.13 0 .236-.107.236-.241v-1.09a.239.239 0 0 0-.236-.24h-.612V8.386a.218.218 0 0 0-.216-.22zm4.225 1.17c-.398 0-.762.15-1.042.395v-.124a.238.238 0 0 0-.234-.224h-1.07a.24.24 0 0 0-.236.242v5.92a.24.24 0 0 0 .236.242h1.07c.12 0 .217-.091.233-.209v-4.25a.393.393 0 0 1 .371-.408h.196a.41.41 0 0 1 .226.09.405.405 0 0 1 .145.319v4.074l.004.155a.24.24 0 0 0 .237.241h1.07a.239.239 0 0 0 .235-.23l-.001-4.246c0-.14.062-.266.174-.34a.419.419 0 0 1 .196-.068h.198c.23.02.37.2.37.408.005 1.396.004 2.8.004 4.224a.24.24 0 0 0 .237.241h1.07c.13 0 .236-.108.236-.241v-4.543c0-.31-.034-.442-.08-.577a1.601 1.601 0 0 0-1.51-1.09h-.015a1.58 1.58 0 0 0-1.152.5c-.291-.308-.7-.5-1.153-.5zM.232 9.4A.234.234 0 0 0 0 9.636v5.924c0 .132.096.238.216.241h1.09c.13 0 .237-.107.237-.24l.004-1.658H2.57c.857 0 1.453-.605 1.453-1.481v-1.538c0-.877-.596-1.484-1.453-1.484H.232zm9.032 0a.239.239 0 0 0-.237.241v2.47c0 .94.657 1.608 1.579 1.608h.675s.016 0 .037.004a.253.253 0 0 1 .222.253c0 .13-.096.235-.219.251l-.018.004-.303.006H9.739a.239.239 0 0 0-.236.24v1.09a.24.24 0 0 0 .236.242h1.75c.92 0 1.577-.669 1.577-1.608v-4.56a.239.239 0 0 0-.236-.24h-1.07a.239.239 0 0 0-.236.24c-.005.787 0 1.525 0 2.255a.253.253 0 0 1-.25.25h-.449a.253.253 0 0 1-.25-.255c.005-.754-.005-1.5-.005-2.25a.239.239 0 0 0-.236-.24zm-4.004.006a.232.232 0 0 0-.238.226v1.023c0 .132.113.24.252.24h1.413c.112.017.2.1.213.23v.14c-.013.124-.1.214-.207.224h-.7c-.93 0-1.594.63-1.594 1.515v1.269c0 .88.57 1.506 1.495 1.506h1.94c.348 0 .63-.27.63-.6v-4.136c0-1.004-.508-1.637-1.72-1.637zm-3.713 1.572h.678c.139 0 .25.115.25.256v.836a.253.253 0 0 1-.25.256h-.1c-.192.002-.386 0-.578 0zm4.67 1.977h.445c.139 0 .252.108.252.24v.932a.23.23 0 0 1-.014.076.25.25 0 0 1-.238.164h-.445a.247.247 0 0 1-.252-.24v-.933c0-.132.113-.239.252-.239Z" fill="white" />
+        </g>
       </svg>
     )
   },
   {
     name: "BHIM UPI",
+    url: "https://www.bhimupi.org.in/",
     logo: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="24" rx="5" fill="#0a2a4a" />
-        <path d="M6 16l4-8h4l-4 8H6z" fill="#ff9933" />
-        <path d="M10 16l4-8h4l-4 8h-4z" fill="white" />
+      <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" fill="white" stroke="#e2e8f0" strokeWidth="0.5" />
+        <path d="M 7,17 L 11.5,7 L 11.5,17 Z" fill="#f47a20" />
+        <path d="M 12.5,17 L 17,7 L 12.5,7 Z" fill="#097a3e" />
       </svg>
     )
   }
@@ -60,6 +70,14 @@ const paymentApps = [
 export function Wallet() {
   const [open, setOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState(walletCards[0]);
+  const openedSectionRef = React.useRef<HTMLElement>(null);
+
+  const handleOpen = () => {
+    setOpen(true);
+    setTimeout(() => {
+      openedSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-10">
@@ -70,7 +88,7 @@ export function Wallet() {
 
       <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div className={`wallet-scene ${open ? "wallet-scene-open" : ""}`}>
-          <button onClick={() => setOpen(true)} className="wallet-leather wallet-cover group relative min-h-[430px] w-full overflow-hidden rounded-[2rem] p-8 text-white shadow-2xl transition-all duration-700 hover:-translate-y-1">
+          <button onClick={handleOpen} className="wallet-leather wallet-cover group relative min-h-[430px] w-full overflow-hidden rounded-[2rem] p-8 text-white shadow-2xl transition-all duration-700 hover:-translate-y-1">
             <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,white,transparent_22%),radial-gradient(circle_at_80%_70%,black,transparent_25%)]" />
             
             {/* Security Indicator in top-right corner */}
@@ -101,7 +119,7 @@ export function Wallet() {
       </section>
 
       {open && (
-        <section className="animate-in fade-in slide-in-from-bottom-6 duration-500">
+        <section ref={openedSectionRef} className="scroll-mt-6 animate-in fade-in slide-in-from-bottom-6 duration-500">
           <Card className="overflow-hidden border-primary/20 bg-sidebar text-sidebar-foreground shadow-2xl">
             <CardHeader className="border-b border-sidebar-border">
               <div className="flex flex-wrap items-center justify-between gap-4">
@@ -149,10 +167,10 @@ export function Wallet() {
         </CardHeader>
         <CardContent className="flex flex-wrap gap-4">
           {paymentApps.map((app) => (
-            <div key={app.name} className="flex items-center gap-3 rounded-2xl border bg-muted/30 px-5 py-3 text-sm font-semibold transition-colors hover:bg-muted/50">
+            <a key={app.name} href={app.url} target="_blank" rel="noreferrer noopener" className="flex items-center gap-3 rounded-2xl border bg-muted/30 px-5 py-3 text-sm font-semibold transition-colors hover:bg-muted/50">
               {app.logo}
               <span>{app.name}</span>
-            </div>
+            </a>
           ))}
         </CardContent>
       </Card>
