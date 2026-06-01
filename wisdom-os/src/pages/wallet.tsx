@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertTriangle, ArrowRight, BadgeIndianRupee, Building2, CheckCircle2, CreditCard, Eye, EyeOff, Landmark, LockKeyhole, Plane, ShieldCheck, Smartphone, WalletCards, X } from "lucide-react";
+import { AlertTriangle, ArrowRight, BadgeIndianRupee, Building2, CreditCard, Eye, EyeOff, Landmark, LockKeyhole, Plane, ShieldCheck, Smartphone, WalletCards, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -38,26 +38,25 @@ export function Wallet() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-10">
       <section className="text-center">
-        <Badge className="bg-primary text-primary-foreground">Private · Secure</Badge>
         <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">Personal Wallet</h1>
-        <p className="mx-auto mt-3 max-w-2xl text-muted-foreground md:text-lg">A private replacement for the physical cards in a real wallet. Safe, quiet, and opened only when needed.</p>
+        <p className="mx-auto mt-3 max-w-2xl text-muted-foreground md:text-lg">A private and secure replacement for the physical cards</p>
       </section>
 
       <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div className={`wallet-scene ${open ? "wallet-scene-open" : ""}`}>
-          <button onClick={() => setOpen(true)} className="wallet-leather wallet-cover group relative min-h-[430px] w-full overflow-hidden rounded-[2rem] p-8 text-left text-white shadow-2xl transition-all duration-700 hover:-translate-y-1">
+          <button onClick={() => setOpen(true)} className="wallet-leather wallet-cover group relative min-h-[430px] w-full overflow-hidden rounded-[2rem] p-8 text-white shadow-2xl transition-all duration-700 hover:-translate-y-1">
             <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,white,transparent_22%),radial-gradient(circle_at_80%_70%,black,transparent_25%)]" />
-            <div className="relative flex h-full flex-col justify-between">
-              <div className="flex items-start justify-between">
-                <div>
-                  <div className="text-sm uppercase tracking-[0.25em] text-white/55">Secure private wallet</div>
-                  <h2 className="mt-4 text-5xl font-bold">Open wallet</h2>
-                </div>
-                <LockKeyhole className="h-7 w-7 text-white/60" />
-              </div>
-              <div className="rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-                <p className="text-sm text-white/75">View 1 keeps the homepage plain and private. Open it to see ID cards, UPI options, and verified document previews.</p>
-                <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-stone-900">Open like a leather wallet <ArrowRight className="h-4 w-4" /></div>
+            
+            {/* Security Indicator in top-right corner */}
+            <div className="absolute top-6 right-6 flex items-center gap-2">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-medium">Secure · Private</span>
+              <LockKeyhole className="h-4 w-4 text-white/50" />
+            </div>
+
+            {/* Centralized CTA */}
+            <div className="relative flex h-full items-center justify-center">
+              <div className="inline-flex items-center gap-3 rounded-full bg-white px-10 py-5 text-2xl font-extrabold text-stone-900 shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-white/20">
+                Open Wallet <ArrowRight className="h-7 w-7 transition-transform duration-300 group-hover:translate-x-2" />
               </div>
             </div>
           </button>
@@ -68,11 +67,10 @@ export function Wallet() {
             <CardTitle className="flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-primary" /> Privacy first</CardTitle>
             <CardDescription>Documents and financial details stay hidden until the wallet is opened.</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <div className="rounded-2xl border bg-muted/30 p-4"><CheckCircle2 className="mb-2 h-5 w-5 text-primary" />Assume access is granted in prototype mode, without exposing card names on the home page.</div>
-            <div className="rounded-2xl border bg-muted/30 p-4"><AlertTriangle className="mb-2 h-5 w-5 text-amber-600" />Official verification, encryption, consent, and deletion/export flows are required before production use.</div>
-            <div className="rounded-2xl border bg-muted/30 p-4"><EyeOff className="mb-2 h-5 w-5 text-slate-600" />Net worth, number of IDs, and asset totals are intentionally not visible on the main view.</div>
-          </CardContent>
+            <CardContent className="space-y-3 text-sm text-muted-foreground">
+              <div className="rounded-2xl border bg-muted/30 p-4"><AlertTriangle className="mb-2 h-5 w-5 text-amber-600" />Official verification, encryption, consent, and deletion/export flows are required before actual use.</div>
+              <div className="rounded-2xl border bg-muted/30 p-4"><EyeOff className="mb-2 h-5 w-5 text-slate-600" />Net worth, number of IDs, and asset totals are intentionally not visible on the main view.</div>
+            </CardContent>
         </Card>
       </section>
 

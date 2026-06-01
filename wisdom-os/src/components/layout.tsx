@@ -3,13 +3,11 @@ import { Link, useLocation } from "wouter";
 import {
   Activity,
   Bot,
-  BrainCircuit,
   ChevronDown,
   ExternalLink,
   Home,
   Library,
   LogOut,
-  Map,
   Menu,
   MessageCircle,
   Mic,
@@ -209,27 +207,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <Button variant="secondary" size="sm" className="rounded-full" onClick={() => setMoreOpen(!moreOpen)}>More <ChevronDown className="h-4 w-4" /></Button>
               {moreOpen && (
                 <div className="absolute right-0 top-11 w-72 overflow-hidden rounded-2xl border bg-card shadow-2xl shadow-black/10">
-                  {/* Explore section */}
-                  <div className="px-4 pt-4 pb-2">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Explore</p>
-                  </div>
-                  <div className="px-2 pb-2 space-y-0.5">
-                    <Link href="/mind-maps" onClick={() => setMoreOpen(false)} className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted">
-                      <div className="grid h-7 w-7 place-items-center rounded-lg bg-violet-100 text-violet-600"><BrainCircuit className="h-4 w-4" /></div>
-                      Mind Maps
-                    </Link>
-                    <Link href="/roadmap" onClick={() => setMoreOpen(false)} className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted">
-                      <div className="grid h-7 w-7 place-items-center rounded-lg bg-sky-100 text-sky-600"><Map className="h-4 w-4" /></div>
-                      100-Year Roadmap
-                    </Link>
-                    <Link href="/ai-lab" onClick={() => setMoreOpen(false)} className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted">
-                      <div className="grid h-7 w-7 place-items-center rounded-lg bg-emerald-100 text-emerald-600"><Bot className="h-4 w-4" /></div>
-                      AI Lab
-                    </Link>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="mx-3 my-1 border-t" />
 
                   {/* Legal & privacy section */}
                   <div className="px-4 pt-3 pb-2">
@@ -274,9 +251,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <div className="pt-2">
                 <div className="px-4 pb-2 text-xs uppercase tracking-[0.2em] text-sidebar-foreground/50">More</div>
-                <Link href="/mind-maps" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium text-sidebar-foreground/80 hover:bg-sidebar-accent"><BrainCircuit className="h-5 w-5" /> Mind Maps</Link>
-                <Link href="/roadmap" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium text-sidebar-foreground/80 hover:bg-sidebar-accent"><Map className="h-5 w-5" /> 100-Year Roadmap</Link>
-                <Link href="/ai-lab" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium text-sidebar-foreground/80 hover:bg-sidebar-accent"><Bot className="h-5 w-5" /> AI Lab</Link>
                 <Link href="/legal" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium text-sidebar-foreground/80 hover:bg-sidebar-accent">Privacy & Compliance</Link>
               </div>
             </nav>
