@@ -14,6 +14,7 @@ import { LaunchBusiness } from "@/pages/launch-business";
 import { Roadmap } from "@/pages/roadmap";
 import { AILab } from "@/pages/ai-lab";
 import { Legal } from "@/pages/legal";
+import { Health } from "@/pages/health";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ function Router() {
         <Route path="/roadmap" component={Roadmap} />
         <Route path="/ai-lab" component={AILab} />
         <Route path="/legal" component={Legal} />
+        <Route path="/health" component={Health} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

@@ -25,9 +25,9 @@ const healthWindows = [
 ];
 
 const learningProgress = [
-  { title: "Indian Cooking Foundations", progress: 64, next: "Cook one dry masala egg dish and log taste, time, hygiene.", tag: "Active" },
-  { title: "Health Baseline Systems", progress: 52, next: "Add 7-day sleep, stress, movement, and food notes.", tag: "Building" },
-  { title: "AI and Data Science", progress: 41, next: "Study one AI concept and apply it to a health or cooking challenge.", tag: "Exploring" },
+  { title: "Indian Cooking Foundations", progress: 64, next: "Cook one dry masala egg dish and log time, hygiene, and taste.", tag: "Active"},
+  { title: "Sleep, Recovery, Diet, Movement", progress: 52, next: "Add a 7-day sleep, stress, food, and movement record.", tag: "Building"},
+  { title: "Product PRDs and AI", progress: 41, next: "Create a health PRD from the template and critique it with Vireo.", tag: "Exploring"},
 ];
 
 const correlatedHabits = [
@@ -53,46 +53,35 @@ export function CommandCenter() {
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
 
-      {/* Compact identity bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border bg-card/80 px-5 py-3">
-        <div className="flex items-center gap-3">
-          <Activity className="h-4 w-4 text-primary" />
-          <span className="text-sm font-semibold text-foreground">Vireo</span>
-          <span className="hidden text-sm text-muted-foreground md:inline">— your personal AI assistant.</span>
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <Button variant="outline" size="sm" className="h-7 rounded-full px-2 text-[11px]" onClick={() => window.alert("Emergency Info (India):\n• Unified National Helpline: 112\n• Ambulance & Medical: 108 or 102\n• Police: 100\n• Fire Services: 101\n\nAlso make sure you have recorded: Emergency contacts, blood group, allergies, active medications, and nearest hospital details.")}><AlertTriangle className="h-3 w-3 text-destructive mr-1" />Emergency</Button>
-          <Button size="sm" className="h-7 rounded-full px-3 text-[11px]" onClick={() => window.dispatchEvent(new Event("open-wisdom-assistant"))}><MessageCircle className="h-3 w-3 mr-1" />Talk to Vireo</Button>
-        </div>
-      </div>
-
       {/* Three focus areas — hero grid */}
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-3 items-stretch">
         {/* Health */}
-        <button onClick={() => document.getElementById("health-snapshot")?.scrollIntoView({ behavior: "smooth" })} className="text-left w-full">
-          <div className="group relative overflow-hidden rounded-[1.75rem] border bg-gradient-to-br from-emerald-50 to-teal-50 p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-200/50 cursor-pointer">
+        <button onClick={() => document.getElementById("health-snapshot")?.scrollIntoView({ behavior: "smooth" })} className="text-left w-full h-full block">
+          <div className="group relative overflow-hidden rounded-[1.75rem] border bg-gradient-to-br from-emerald-100/80 to-teal-100/70 p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-200/50 cursor-pointer h-full">
             <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-emerald-200/30 blur-2xl" />
-            <div className="relative">
-              <div className="flex items-start justify-between">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl bg-emerald-100 text-emerald-700">
-                  <HeartPulse className="h-6 w-6" />
-                </div>
-                <Badge className="bg-emerald-600 text-white text-[10px]">Baseline</Badge>
-              </div>
-              <h2 className="mt-4 text-xl font-bold text-emerald-900">Health</h2>
-              <p className="mt-1 text-sm text-emerald-800/75">Sleep, recovery, stress, movement, and body baseline — with daily and trend indicators.</p>
-              <div className="mt-4 grid grid-cols-2 gap-2">
-                {[
-                  { label: "Today", value: "Stable" },
-                  { label: "7-day", value: "+12% ↑" },
-                  { label: "Recovery", value: "76%" },
-                  { label: "Sleep", value: "7h 24m" },
-                ].map((stat) => (
-                  <div key={stat.label} className="rounded-xl bg-white/70 px-3 py-2 text-center">
-                    <div className="text-[10px] text-emerald-700/70">{stat.label}</div>
-                    <div className="mt-0.5 text-sm font-bold text-emerald-900">{stat.value}</div>
+            <div className="relative h-full flex flex-col justify-between">
+              <div>
+                <div className="flex items-start justify-between">
+                  <div className="grid h-11 w-11 place-items-center rounded-2xl bg-emerald-100 text-emerald-700">
+                    <HeartPulse className="h-6 w-6" />
                   </div>
-                ))}
+                  <Badge className="bg-emerald-600 text-white text-[10px]">Baseline</Badge>
+                </div>
+                <h2 className="mt-4 text-xl font-bold text-emerald-900">Health</h2>
+                <p className="mt-1 text-sm text-emerald-800/75">Sleep, recovery, stress, movement, and body baseline — with daily and trend indicators.</p>
+                <div className="mt-4 grid grid-cols-2 gap-2">
+                  {[
+                    { label: "Today", value: "Stable" },
+                    { label: "7-day", value: "+12% ↑" },
+                    { label: "Recovery", value: "76%" },
+                    { label: "Sleep", value: "7h 24m" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-xl bg-white px-3 py-2 text-center shadow-sm">
+                      <div className="text-[10px] text-emerald-700/70">{stat.label}</div>
+                      <div className="mt-0.5 text-sm font-bold text-emerald-900">{stat.value}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="mt-4 flex items-center justify-end gap-1 text-xs font-medium text-emerald-700 group-hover:text-emerald-900">
                 View details <ArrowRight className="h-3.5 w-3.5" />
@@ -102,28 +91,30 @@ export function CommandCenter() {
         </button>
 
         {/* Learning */}
-        <Link href="/courses">
-          <div className="group relative overflow-hidden rounded-[1.75rem] border bg-gradient-to-br from-sky-50 to-blue-50 p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-200/50 cursor-pointer">
+        <Link href="/courses" className="h-full block">
+          <div className="group relative overflow-hidden rounded-[1.75rem] border bg-gradient-to-br from-sky-50 to-blue-50 p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-200/50 cursor-pointer h-full">
             <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-sky-200/30 blur-2xl" />
-            <div className="relative">
-              <div className="flex items-start justify-between">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl bg-sky-100 text-sky-700">
-                  <Utensils className="h-6 w-6" />
-                </div>
-                <Badge className="bg-sky-600 text-white text-[10px]">In Progress</Badge>
-              </div>
-              <h2 className="mt-4 text-xl font-bold text-sky-900">Daily Learnings</h2>
-              <p className="mt-1 text-sm text-sky-800/75">Skills, cooking, AI, and personal development — tracked by progress and next action.</p>
-              <div className="mt-4 space-y-2">
-                {learningProgress.map((course) => (
-                  <div key={course.title} className="rounded-xl bg-white/70 px-3 py-2">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-xs text-sky-900 font-medium truncate">{course.title}</span>
-                      <span className="text-xs font-bold text-sky-700 shrink-0">{course.progress}%</span>
-                    </div>
-                    <Progress value={course.progress} className="mt-1 h-1.5 bg-sky-100" />
+            <div className="relative h-full flex flex-col justify-between">
+              <div>
+                <div className="flex items-start justify-between">
+                  <div className="grid h-11 w-11 place-items-center rounded-2xl bg-sky-100 text-sky-700">
+                    <Utensils className="h-6 w-6" />
                   </div>
-                ))}
+                  <Badge className="bg-sky-600 text-white text-[10px]">In Progress</Badge>
+                </div>
+                <h2 className="mt-4 text-xl font-bold text-sky-900">My Skills</h2>
+                <p className="mt-1 text-sm text-sky-800/75">Skills, cooking, AI, and personal development — tracked by progress and next action.</p>
+                <div className="mt-4 space-y-2">
+                  {learningProgress.map((course) => (
+                    <div key={course.title} className="rounded-xl bg-white/70 px-3 py-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-xs text-sky-900 font-medium truncate">{course.title}</span>
+                        <span className="text-xs font-bold text-sky-700 shrink-0">{course.progress}%</span>
+                      </div>
+                      <Progress value={course.progress} className="mt-1 h-1.5 bg-sky-100" />
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="mt-4 flex items-center justify-end gap-1 text-xs font-medium text-sky-700 group-hover:text-sky-900">
                 View all courses <ArrowRight className="h-3.5 w-3.5" />
@@ -133,30 +124,32 @@ export function CommandCenter() {
         </Link>
 
         {/* Wallet */}
-        <Link href="/wallet">
-          <div className="group relative overflow-hidden rounded-[1.75rem] border bg-gradient-to-br from-stone-800 to-stone-900 p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-stone-700/40 cursor-pointer">
+        <Link href="/wallet" className="h-full block">
+          <div className="wallet-leather text-white group relative overflow-hidden rounded-[1.75rem] border p-5 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-stone-700/40 cursor-pointer h-full">
             <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-white/5 blur-2xl" />
-            <div className="relative">
-              <div className="flex items-start justify-between">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/10 text-stone-200">
-                  <WalletCards className="h-6 w-6" />
-                </div>
-                <Badge className="bg-white/15 text-stone-100 text-[10px]">Private</Badge>
-              </div>
-              <h2 className="mt-4 text-xl font-bold text-white">Personal Wallet</h2>
-              <p className="mt-1 text-sm text-stone-300">Private digital cards, UPI apps, ID proofs, assets, and liabilities — open only when needed.</p>
-              <div className="mt-4 grid grid-cols-2 gap-2">
-                {[
-                  { label: "ID Cards", value: "5 stored" },
-                  { label: "UPI Apps", value: "4 linked" },
-                  { label: "Assets", value: "Private" },
-                  { label: "Status", value: "Secure" },
-                ].map((stat) => (
-                  <div key={stat.label} className="rounded-xl bg-white/10 px-3 py-2 text-center">
-                    <div className="text-[10px] text-stone-400">{stat.label}</div>
-                    <div className="mt-0.5 text-sm font-bold text-white">{stat.value}</div>
+            <div className="relative h-full flex flex-col justify-between">
+              <div>
+                <div className="flex items-start justify-between">
+                  <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white/10 text-stone-200">
+                    <WalletCards className="h-6 w-6" />
                   </div>
-                ))}
+                  <Badge className="bg-white/15 text-stone-100 text-[10px]">Private · Secure</Badge>
+                </div>
+                <h2 className="mt-4 text-xl font-bold text-white">Personal Wallet</h2>
+                <p className="mt-1 text-sm text-stone-300">Private digital cards, UPI apps, ID proofs, assets, and liabilities — open only when needed.</p>
+                <div className="mt-4 grid grid-cols-2 gap-2">
+                  {[
+                    { label: "ID Cards", value: "5 stored" },
+                    { label: "UPI Apps", value: "4 linked" },
+                    { label: "Assets", value: "Private" },
+                    { label: "Status", value: "Secure" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-xl bg-white/10 px-3 py-2 text-center">
+                      <div className="text-[10px] text-stone-400">{stat.label}</div>
+                      <div className="mt-0.5 text-sm font-bold text-white">{stat.value}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="mt-4 flex items-center justify-end gap-1 text-xs font-medium text-stone-400 group-hover:text-stone-200">
                 Open wallet <ArrowRight className="h-3.5 w-3.5" />
@@ -181,7 +174,9 @@ export function CommandCenter() {
                 <p className="mt-2 text-xs text-muted-foreground">{item.detail}</p>
               </button>
             ))}
-            <Button variant="secondary" className="rounded-2xl sm:col-span-2" onClick={() => setDetail("Detailed health metrics: HRV, resting heart rate, sleep duration, sleep consistency, strain, steps, zone-2 cardio, body weight, body fat, muscle, hydration, journal sentiment, and habit impact analysis.")}><Eye className="h-4 w-4" /> Detailed health view</Button>
+            <Link href="/health" className="sm:col-span-2">
+              <Button variant="secondary" className="w-full rounded-2xl border transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.01] hover:shadow-lg hover:shadow-primary/10"><Eye className="h-4 w-4" /> Detailed health view</Button>
+            </Link>
           </CardContent>
         </Card>
 
@@ -205,7 +200,7 @@ export function CommandCenter() {
 
       <Card className="bg-card/95">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2"><BookOpenCheck className="h-5 w-5 text-primary" /> Daily learnings and development</CardTitle>
+          <CardTitle className="flex items-center gap-2"><BookOpenCheck className="h-5 w-5 text-primary" /> My Skills</CardTitle>
           <CardDescription>Skills currently in progress with next actionables.</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4 lg:grid-cols-3">
@@ -215,20 +210,31 @@ export function CommandCenter() {
               <h3 className="mt-3 font-semibold">{course.title}</h3>
               <Progress value={course.progress} className="mt-4 h-2" />
               <p className="mt-3 text-sm text-muted-foreground">{course.progress}% complete</p>
-              <button onClick={() => setDetail(course.next)} className="mt-4 flex w-full items-center justify-between rounded-2xl border bg-background p-3 text-left text-sm hover:border-primary/50">Next action <ArrowRight className="h-4 w-4" /></button>
+              <Link href="/courses" className="mt-4 flex w-full flex-col gap-1.5 rounded-2xl border bg-background p-3.5 text-left text-xs hover:border-primary/50 cursor-pointer transition-all duration-200">
+                <div className="flex items-center justify-between font-semibold text-primary">
+                  <span>Next Action</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{course.next}</p>
+              </Link>
             </div>
           ))}
         </CardContent>
       </Card>
 
       <Card className="wallet-leather overflow-hidden text-white">
-        <CardContent className="grid gap-6 p-6 md:grid-cols-[1fr_0.8fr] md:p-8">
+        <CardContent className="grid gap-6 p-6 md:grid-cols-[1.2fr_0.8fr] md:p-8 items-center">
           <div>
             <Badge className="bg-white/15 text-white hover:bg-white/20">Private · Secure</Badge>
             <h2 className="mt-4 text-3xl font-bold md:text-4xl">A digital replacement for physical wallet cards.</h2>
-            <p className="mt-3 max-w-2xl text-white/70">The homepage stays quiet: leather wallet, safety cues, and an opening action. Documents and assets stay inside.</p>
           </div>
-          <Link href="/wallet"><Button size="lg" variant="secondary" className="self-center rounded-2xl">Open wallet <ArrowRight className="h-4 w-4" /></Button></Link>
+          <div className="flex md:justify-end items-center">
+            <Link href="/wallet">
+              <Button size="lg" variant="secondary" className="rounded-3xl border px-10 py-7 text-xl font-extrabold transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.05] hover:shadow-lg hover:shadow-primary/20 flex items-center gap-3">
+                Open wallet <ArrowRight className="h-6 w-6" />
+              </Button>
+            </Link>
+          </div>
         </CardContent>
       </Card>
 

@@ -36,10 +36,9 @@ export function CourseLibrary() {
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-10">
-      <section className="rounded-[2rem] border bg-card/95 p-6 shadow-xl shadow-primary/5 md:p-8">
-        <Badge className="bg-primary text-primary-foreground">Daily learnings and development</Badge>
-        <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">Track the next action in each skill, not just a course list.</h1>
-        <p className="mt-4 max-w-3xl text-muted-foreground md:text-lg">The learning feed surfaces skills currently in progress, with deeper paths available when you want to study.</p>
+      <section className="rounded-2xl border bg-card/95 p-4 shadow-md md:p-5">
+        <Badge className="bg-primary text-primary-foreground">My Skills</Badge>
+        <h1 className="mt-3 max-w-4xl text-2xl font-bold tracking-tight md:text-3xl">Track the next action in each skill.</h1>
       </section>
 
       <Card className="bg-sidebar text-sidebar-foreground">

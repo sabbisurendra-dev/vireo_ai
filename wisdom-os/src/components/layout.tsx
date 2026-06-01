@@ -2,9 +2,11 @@ import React from "react";
 import { Link, useLocation } from "wouter";
 import {
   Activity,
+  AlertTriangle,
   Bot,
   ChevronDown,
   ExternalLink,
+  HeartPulse,
   Home,
   Library,
   LogOut,
@@ -19,6 +21,7 @@ import { Button } from "@/components/ui/button";
 
 const NAV_ITEMS = [
   { path: "/", label: "Home", icon: Home },
+  { path: "/health", label: "Health", icon: HeartPulse },
   { path: "/courses", label: "My Skills", icon: Library },
   { path: "/wallet", label: "Personal Wallet", icon: ShieldCheck },
 ];
@@ -26,13 +29,13 @@ const NAV_ITEMS = [
 function VireoLogo({ compact = false }: { compact?: boolean }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="relative grid h-12 w-12 place-items-center overflow-hidden rounded-2xl bg-slate-800 shadow-lg shadow-black/15">
+      <div className="relative grid h-14 w-14 place-items-center overflow-hidden rounded-2xl bg-slate-800 shadow-lg shadow-black/15">
         <div className="absolute inset-0 bg-[conic-gradient(from_140deg,#2f80ed,#27ae60,#9ca3af,#2f80ed)] opacity-95" />
-        <div className="absolute inset-[4px] rounded-xl bg-sidebar/90" />
+        <div className="absolute inset-[5px] rounded-xl bg-sidebar/90" />
         <div className="relative flex items-center gap-0.5">
-          <Activity className="h-4 w-4 text-emerald-300" />
-          <Library className="h-4 w-4 text-sky-300" />
-          <ShieldCheck className="h-4 w-4 text-slate-200" />
+          <Activity className="h-3.5 w-3.5 text-emerald-300" />
+          <Library className="h-3.5 w-3.5 text-sky-300" />
+          <ShieldCheck className="h-3.5 w-3.5 text-slate-200" />
         </div>
       </div>
       {!compact && (
@@ -141,8 +144,8 @@ function AssistantDock() {
         </div>
       )}
       <div className="flex items-center gap-2 rounded-full border bg-card/90 p-2 shadow-2xl shadow-black/15 backdrop-blur">
-        <Button size="icon" variant="secondary" className="rounded-full" onClick={() => { setOpen(true); setMode("voice"); }}><Mic className="h-4 w-4" /></Button>
-        <Button className="rounded-full shadow-lg" onClick={() => { setOpen(!open); setMode(open ? mode : "menu"); }}><Bot className="h-4 w-4" /> Vireo</Button>
+        <Button size="icon" variant="secondary" className="rounded-full border transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.05] hover:shadow-lg hover:shadow-primary/20" onClick={() => { setOpen(true); setMode("voice"); }}><Mic className="h-4 w-4" /></Button>
+        <Button className="rounded-full shadow-lg border transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.05] hover:shadow-lg hover:shadow-primary/20" onClick={() => { setOpen(!open); setMode(open ? mode : "menu"); }}><Bot className="h-4 w-4" /> Vireo</Button>
       </div>
     </div>
   );
@@ -191,22 +194,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
 
-      <main className="flex min-h-[100dvh] flex-1 flex-col overflow-y-auto pt-16 md:pt-0">
-        <header className="fixed left-0 right-0 top-0 z-40 flex h-16 items-center justify-between border-b bg-background/90 px-4 backdrop-blur md:sticky md:left-auto md:px-8">
-          <div className="flex items-center gap-3">
-            <div className="md:hidden"><VireoLogo compact /></div>
-            <Link href="/"><Button variant="ghost" size="sm" className="rounded-full"><Home className="h-4 w-4" /> Home</Button></Link>
-            <div className="hidden items-center gap-1 rounded-full border bg-muted/40 px-2 py-1 text-xs text-muted-foreground lg:flex">
-              <Activity className="h-3.5 w-3.5 text-emerald-600" /> Health
-              <Library className="ml-2 h-3.5 w-3.5 text-sky-600" /> Learning
-              <ShieldCheck className="ml-2 h-3.5 w-3.5 text-slate-600" /> Wallet
-            </div>
+      <main className="flex min-h-[100dvh] flex-1 flex-col overflow-y-auto pt-12 md:pt-[5px]">
+        <header className="fixed left-0 right-0 top-[5px] z-40 flex h-12 items-center justify-between border-b bg-background/90 px-4 backdrop-blur md:sticky md:top-[5px] md:left-auto md:px-8">
+          {/* Left-aligned title */}
+          <div className="flex items-center gap-2 whitespace-nowrap">
+            <span className="text-base font-bold text-foreground">Vireo</span>
+            <span className="hidden sm:inline text-xs font-normal text-muted-foreground">— your personal AI assistant</span>
           </div>
-          <div className="flex items-center gap-2">
+
+          <div className="flex items-center gap-2 ml-auto">
+            <Button variant="outline" size="sm" className="h-8 rounded-full px-3 text-xs border transition-all duration-300 hover:border-destructive hover:bg-destructive hover:text-destructive-foreground hover:scale-[1.03] hover:shadow-lg hover:shadow-destructive/10" onClick={() => window.alert("Emergency Info (India):\n• Unified National Helpline: 112\n• Ambulance & Medical: 108 or 102\n• Police: 100\n• Fire Services: 101\n\nAlso make sure you have recorded: Emergency contacts, blood group, allergies, active medications, and nearest hospital details.")}>
+              <AlertTriangle className="h-3.5 w-3.5 text-destructive mr-1" />
+              Emergency
+            </Button>
+            <Button size="sm" className="h-8 rounded-full px-4 text-xs border transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/10" onClick={() => window.dispatchEvent(new Event("open-wisdom-assistant"))}>
+              <MessageCircle className="h-3.5 w-3.5 mr-1" />
+              Talk to Vireo
+            </Button>
             <div className="relative" ref={moreRef}>
-              <Button variant="secondary" size="sm" className="rounded-full" onClick={() => setMoreOpen(!moreOpen)}>More <ChevronDown className="h-4 w-4" /></Button>
+              <Button variant="secondary" size="sm" className="h-8 rounded-full px-4 text-xs" onClick={() => setMoreOpen(!moreOpen)}>
+                More <ChevronDown className="h-4 w-4" />
+              </Button>
               {moreOpen && (
-                <div className="absolute right-0 top-11 w-72 overflow-hidden rounded-2xl border bg-card shadow-2xl shadow-black/10">
+                <div className="absolute right-0 top-10 w-72 overflow-hidden rounded-2xl border bg-card shadow-2xl shadow-black/10">
 
                   {/* Legal & privacy section */}
                   <div className="px-4 pt-3 pb-2">
@@ -241,14 +251,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </header>
 
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 top-16 z-40 bg-sidebar p-4 text-sidebar-foreground md:hidden">
+          <div className="fixed inset-0 top-12 z-40 bg-sidebar p-4 text-sidebar-foreground md:hidden">
             <nav className="space-y-2">
-              {NAV_ITEMS.map((item) => (
-                <Link key={item.path} href={item.path} onClick={() => setIsMobileMenuOpen(false)} className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium transition-colors ${location === item.path ? "bg-primary text-primary-foreground" : "text-sidebar-foreground/80 hover:bg-sidebar-accent"}`}>
-                  <item.icon className="h-5 w-5" />
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const active = location === item.path;
+                return (
+                  <Link key={item.path} href={item.path} onClick={() => setIsMobileMenuOpen(false)} className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium transition-colors ${active ? "bg-primary text-primary-foreground" : "text-sidebar-foreground/80 hover:bg-sidebar-accent"}`}>
+                    <item.icon className="h-5 w-5" />
+                    {item.label}
+                  </Link>
+                );
+              })}
               <div className="pt-2">
                 <div className="px-4 pb-2 text-xs uppercase tracking-[0.2em] text-sidebar-foreground/50">More</div>
                 <Link href="/legal" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium text-sidebar-foreground/80 hover:bg-sidebar-accent">Privacy & Compliance</Link>
@@ -258,14 +271,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         )}
 
         <div className="mx-auto w-full max-w-7xl flex-1 p-5 md:p-8 lg:p-10">{children}</div>
-        <footer className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-5 pb-24 text-xs text-muted-foreground md:px-8 lg:px-10">
-          <span>Vireo — health, learning, and wallet in one place.</span>
-          <div className="flex gap-3">
-            <Link href="/legal" className="hover:text-primary">Privacy</Link>
-            <Link href="/legal" className="hover:text-primary">Health data</Link>
-            <Link href="/legal" className="hover:text-primary">DPDP/GDPR</Link>
-          </div>
-        </footer>
+        {location === "/" && (
+          <footer className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-5 pb-24 text-xs text-muted-foreground md:px-8 lg:px-10">
+            <span>Vireo — health, learning, and wallet in one place.</span>
+            <div className="flex gap-3">
+              <Link href="/legal" className="hover:text-primary">Privacy</Link>
+              <Link href="/legal" className="hover:text-primary">Health data</Link>
+              <Link href="/legal" className="hover:text-primary">DPDP/GDPR</Link>
+            </div>
+          </footer>
+        )}
       </main>
       <AssistantDock />
     </div>
