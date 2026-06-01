@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertTriangle, ArrowRight, BadgeIndianRupee, Building2, CreditCard, Eye, EyeOff, Landmark, LockKeyhole, Plane, ShieldCheck, Smartphone, WalletCards, X } from "lucide-react";
+import { AlertTriangle, ArrowRight, BadgeIndianRupee, CreditCard, LockKeyhole, ShieldCheck, Smartphone, WalletCards, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,26 +14,52 @@ const walletCards = [
   { name: "Permit Card", type: "Access permit", number: "PERMIT ••• 118", color: "from-amber-800 to-orange-600", image: `${BASE}/generated/permit-card.png` },
 ];
 
-const paymentApps = ["PhonePe", "Google Pay", "Paytm", "BHIM UPI"];
-
-const assets = [
-  { title: "Liquid cash and bank balances", value: "Private", detail: "Savings accounts, cash reserve, emergency fund, and UPI-linked accounts." },
-  { title: "House and land", value: "Documents indexed", detail: "Sale deed, tax receipts, utility proofs, ownership chain, and transfer notes." },
-  { title: "Mutual funds and bonds", value: "Portfolio copy", detail: "Folio list, nominee details, statements, and redemption process." },
-  { title: "Other assets", value: "Certificates stored", detail: "Vehicle RC, electronics invoices, insurance, deposits, permits, and professional certificates." },
-];
-
-const liabilities = [
-  { title: "Home or personal loans", value: "Repayment file", detail: "Outstanding principal, lender contacts, NOC process, and closure checklist." },
-  { title: "Credit cards and subscriptions", value: "Mapped", detail: "Payment dates, autopay notes, cancellation path, and dispute instructions." },
-  { title: "Taxes and legal obligations", value: "Review required", detail: "Filing records, advisor contacts, notices, and renewal dates." },
+const paymentApps = [
+  {
+    name: "PhonePe",
+    logo: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-[#5f259f] shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" />
+        <path d="M12 4a8 8 0 100 16 8 8 0 000-16zm-1 11H9V8h2v7zm4-4h-2v4h-2V8h4a2 2 0 010 4z" fill="white" />
+      </svg>
+    )
+  },
+  {
+    name: "Google Pay",
+    logo: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" fill="#f1f3f4" />
+        <path d="M17.5 12.25c0-.4-.03-.78-.1-1.15h-5.4v2.18h3.08c-.13.7-.53 1.3-1.13 1.7v1.4h1.83c1.07-.98 1.72-2.43 1.72-4.13z" fill="#4285f4" />
+        <path d="M12 17.8c1.56 0 2.88-.5 3.84-1.4l-1.83-1.4c-.5.34-1.15.54-2.01.54-1.55 0-2.85-1.04-3.32-2.44H6.77v1.45c.98 1.95 3.01 3.25 5.23 3.25z" fill="#34a853" />
+        <path d="M8.68 13.1c-.12-.35-.18-.73-.18-1.1s.06-.75.18-1.1V9.45H6.77c-.4.8-.62 1.7-.62 2.65s.22 1.85.62 2.65l1.91-1.45z" fill="#fbbc05" />
+        <path d="M12 6.2c.85 0 1.62.3 2.22.86l1.66-1.66C14.88 4.45 13.56 4 12 4c-2.22 0-4.25 1.3-5.23 3.25l1.91 1.45c.47-1.4 1.77-2.5 3.32-2.5z" fill="#ea4335" />
+      </svg>
+    )
+  },
+  {
+    name: "Paytm",
+    logo: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" fill="#00baf2" />
+        <path d="M7 6h6.5c1.9 0 3.5 1.6 3.5 3.5S15.4 13 13.5 13H10v5H7V6zm3 4h3.5c.3 0 .5-.2.5-.5s-.2-.5-.5-.5H10v1z" fill="white" />
+      </svg>
+    )
+  },
+  {
+    name: "BHIM UPI",
+    logo: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" fill="#0a2a4a" />
+        <path d="M6 16l4-8h4l-4 8H6z" fill="#ff9933" />
+        <path d="M10 16l4-8h4l-4 8h-4z" fill="white" />
+      </svg>
+    )
+  }
 ];
 
 export function Wallet() {
   const [open, setOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState(walletCards[0]);
-  const [showAssets, setShowAssets] = React.useState(false);
-  const [confirmAssets, setConfirmAssets] = React.useState(false);
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-10">
@@ -102,7 +128,7 @@ export function Wallet() {
                   </button>
                 ))}
               </div>
-              <div className="space-y-5">
+              <div>
                 <div className="rounded-[2rem] border border-sidebar-border bg-white p-5 text-slate-900 shadow-xl">
                   <div className="flex items-start justify-between gap-4"><div><div className="text-xs uppercase tracking-[0.25em] text-slate-400">Digitally valid preview</div><h3 className="mt-2 text-3xl font-bold">{selectedCard.name}</h3><p className="mt-1 text-sm text-slate-500">{selectedCard.type}</p></div><ShieldCheck className="h-7 w-7 text-emerald-600" /></div>
                   <div className="mt-8 overflow-hidden rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 p-3">
@@ -110,35 +136,26 @@ export function Wallet() {
                   </div>
                   <p className="mt-4 text-xs text-slate-500">Simulated scanned copy. Production must show source, last verified date, consent, and official validation path.</p>
                 </div>
-                <Card className="bg-sidebar-accent/60 text-sidebar-foreground border-sidebar-border">
-                  <CardHeader><CardTitle className="flex items-center gap-2"><Smartphone className="h-5 w-5 text-primary" /> Payment options</CardTitle><CardDescription className="text-sidebar-foreground/60">Common Indian UPI apps shown prominently inside the wallet.</CardDescription></CardHeader>
-                  <CardContent className="flex flex-wrap gap-2">{paymentApps.map((app) => <Badge key={app} variant="outline" className="border-sidebar-border bg-sidebar text-sidebar-foreground">{app}</Badge>)}</CardContent>
-                </Card>
-                {!showAssets && <Button variant="outline" size="sm" className="rounded-full border-sidebar-border text-sidebar-foreground hover:bg-sidebar-accent" onClick={() => setConfirmAssets(true)}><Eye className="h-4 w-4" /> Rarely used: assets and liabilities</Button>}
               </div>
             </CardContent>
           </Card>
         </section>
       )}
 
-      {confirmAssets && !showAssets && (
-        <Card className="border-amber-300 bg-amber-50">
-          <CardHeader><CardTitle>Open deeper private records?</CardTitle><CardDescription>This view is intentionally frictional because assets, liabilities, permits, certificates, and financial documents are rarely needed and highly sensitive.</CardDescription></CardHeader>
-          <CardContent className="flex flex-wrap gap-3"><Button className="rounded-2xl" onClick={() => { setShowAssets(true); setConfirmAssets(false); }}>Yes, open detailed view</Button><Button variant="outline" className="rounded-2xl" onClick={() => setConfirmAssets(false)}>Keep hidden</Button></CardContent>
-        </Card>
-      )}
-
-      {showAssets && (
-        <section className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
-          <div className="text-center"><Badge variant="secondary">Detailed private ownership records</Badge><h2 className="mt-3 text-3xl font-bold">Assets and liabilities</h2><p className="mt-2 text-muted-foreground">Total values stay private; categories and document descriptions are shown for planning.</p></div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            <Card className="bg-card/95"><CardHeader><CardTitle className="flex items-center gap-2"><Building2 className="h-5 w-5 text-primary" /> Assets</CardTitle></CardHeader><CardContent className="space-y-3">{assets.map((item) => <div key={item.title} className="rounded-2xl border bg-muted/30 p-4"><div className="flex items-center justify-between gap-3"><h3 className="font-semibold">{item.title}</h3><Badge variant="outline">{item.value}</Badge></div><p className="mt-2 text-sm text-muted-foreground">{item.detail}</p></div>)}</CardContent></Card>
-            <Card className="bg-card/95"><CardHeader><CardTitle className="flex items-center gap-2"><Landmark className="h-5 w-5 text-primary" /> Liabilities</CardTitle></CardHeader><CardContent className="space-y-3">{liabilities.map((item) => <div key={item.title} className="rounded-2xl border bg-muted/30 p-4"><div className="flex items-center justify-between gap-3"><h3 className="font-semibold">{item.title}</h3><Badge variant="outline">{item.value}</Badge></div><p className="mt-2 text-sm text-muted-foreground">{item.detail}</p></div>)}</CardContent></Card>
-          </div>
-          <Card className="bg-card/95"><CardHeader><CardTitle className="flex items-center gap-2"><Plane className="h-5 w-5 text-primary" /> Travel, permits, and certificates</CardTitle><CardDescription>Passport, visas, flight/train/bus references, international support links, professional certificates, and ownership transfer instructions belong here.</CardDescription></CardHeader></Card>
-          <Button variant="outline" className="rounded-2xl" onClick={() => setShowAssets(false)}><EyeOff className="h-4 w-4" /> Hide private records</Button>
-        </section>
-      )}
+      <Card className="bg-card/95">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2"><Smartphone className="h-5 w-5 text-primary" /> Payment options</CardTitle>
+          <CardDescription>Common Indian UPI apps shown prominently inside the wallet.</CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-4">
+          {paymentApps.map((app) => (
+            <div key={app.name} className="flex items-center gap-3 rounded-2xl border bg-muted/30 px-5 py-3 text-sm font-semibold transition-colors hover:bg-muted/50">
+              {app.logo}
+              <span>{app.name}</span>
+            </div>
+          ))}
+        </CardContent>
+      </Card>
 
       <Card className="bg-card/95">
         <CardHeader>
@@ -158,6 +175,17 @@ export function Wallet() {
             </a>
           ))}
         </CardContent>
+      </Card>
+
+      <Card className="border-dashed border-muted bg-muted/20 opacity-70">
+        <CardHeader className="py-4">
+          <CardTitle className="flex items-center gap-2 text-sm text-muted-foreground">
+            <LockKeyhole className="h-4 w-4 text-muted-foreground" /> Assets and liabilities (Locked)
+          </CardTitle>
+          <CardDescription className="text-xs">
+            This section is locked and not available for now. It will be available in future updates.
+          </CardDescription>
+        </CardHeader>
       </Card>
     </div>
   );
